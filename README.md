@@ -15,6 +15,7 @@ INSTALLATION
    - python manage.py runserver
   
 2. Frontend / UI setup. Make sure you have Node.js and NPM installed
+   - cd frontend/selp_client
    - npm install
    - npm run dev
 
