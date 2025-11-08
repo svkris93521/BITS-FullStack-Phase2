@@ -1,0 +1,41 @@
+[
+    {
+        "model": "users.user",
+        "fields": {
+            "username": "student",
+            "first_name": "student",
+            "last_name": "student",
+            "role": "student",
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": false,
+            "password": "123"
+        }
+    },
+    {
+        "model": "users.user",
+        "fields": {
+            "username": "staff",
+            "first_name": "staff",
+            "last_name": "staff",
+            "role": "staff",
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "password": "123"
+        }
+    },
+        {
+        "model": "users.user",
+        "fields": {
+            "username": "admin",
+            "first_name": "admin",
+            "last_name": "admin",
+            "role": "admin",
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": true,
+            "password": "123"
+        }
+    }
+]

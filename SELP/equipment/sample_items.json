@@ -1,0 +1,22 @@
+[
+    {
+        "model":"equipment.item",
+        "fields": {
+            "name": "Football",
+            "category": "sports",
+            "condition": "working",
+            "quantity": 100,
+            "availability": 100
+        }
+    }, 
+        {
+        "model": "equipment.item",
+        "fields": {
+            "name": "Chromebook",
+            "category": "lab",
+            "condition": "working",
+            "quantity": 60,
+            "availability": 60
+        }   
+    }
+]

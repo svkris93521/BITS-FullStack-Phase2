@@ -1,0 +1,96 @@
+.site-header {
+  /* allow header to span full viewport width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(90deg,#0b6cf6,#5a35d8);
+  color: white;
+  /* match previous preferred height */
+  min-height: 64px;
+  padding: 0; /* inner container (.header-inner) handles horizontal padding */
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* leave room on the left for the absolute-positioned brand */
+  padding: 0 0.25rem 0 64px;
+  /* keep this container static so absolute children position relative to .site-header */
+  height: 64px;
+}
+.brand { flex: 0 0 auto; position: absolute; left: 0.5rem; top: 50%; transform: translateY(-50%); }
+.site-logo { display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 48px; }
+.site-logo svg { height: 48px; width: 48px; fill: currentColor; }
+.site-nav { display: flex; gap: 1rem; margin-left: 1rem; flex: 1 1 auto; }
+.site-nav a { color: rgba(255,255,255,0.95); text-decoration: none; font-weight: 600; }
+.site-nav a:hover { text-decoration: underline; }
+.auth-area { flex: 0 0 auto; display: flex; gap: 0.5rem; align-items: center; position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); }
+.btn-link { background: transparent; color: white; border: 0; cursor: pointer; margin-left: 0.5rem; }
+.username { margin-right: 0.5rem; font-weight: 600; }
+
+.signout-btn { color: white !important; font-size: 28px; }
+.signout-btn svg, .signout-btn .MuiSvgIcon-root, .signout-btn svg path {
+  width: 28px;
+  height: 28px;
+  fill: white !important;
+  color: white !important;
+}
+
+.header-actions { display: flex; gap: 0.5rem; align-items: center; margin-left: 0; flex: 1 1 auto; }
+.action-btn { background: rgba(255,255,255,0.12); color: white; border: 0; padding: 0.35rem 0.6rem; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.action-btn:hover { background: rgba(255,255,255,0.18); }
+
+.app-main { max-width: 1280px; margin: 1.25rem auto; padding: 1rem; padding-top: 64px; }
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+.site-footer { margin-top: auto; padding: 1rem 0; text-align: center; color: #666; border-top: 1px solid #eee; }
+
+.items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.item-card { background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.item-image { width: 100%; height: 140px; object-fit: cover; background: #f6f6f6; }
+.item-body { padding: 0.75rem; text-align: left; }
+.item-title { margin: 0 0 0.25rem; font-size: 1.05rem; }
+.item-meta { margin: 0 0 0.5rem; color: #666; font-size: 0.9rem; }
+
+.items-loading, .items-empty { text-align: center; color: #666; padding: 2rem; }
+
+@media (max-width: 640px) {
+  .site-nav { display: none; }
+  .site-logo { height: 40px; }
+}
+
+/* ItemList table and toolbar styling */
+.items-area { display: flex; flex-direction: column; gap: 1rem; }
+.items-toolbar { display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; padding: 0.25rem 0; }
+.items-toolbar .MuiTextField-root { min-width: 220px; }
+.items-toolbar .MuiToggleButtonGroup-root { margin-left: auto; }
+
+/* Improve table responsiveness */
+table { width: 100%; }
+.MuiTableContainer-root { max-height: 60vh; }
+.MuiTableCell-root { padding: 12px 16px; }
+
+@media (max-width: 720px) {
+  .items-toolbar { flex-direction: column; align-items: stretch; }
+  .items-toolbar .MuiTextField-root { width: 100%; }
+  .header-inner { padding-left: 0.5rem; }
+}
+
+/* translucent SELP branding next to the home icon */
+.brand-label { display: flex; gap: 0; align-items: center; margin-left: 0; color: rgba(255,255,255,0.95); opacity: 0.95; font-weight: 600; }
+.brand-label .role-icon { display: inline-block; margin-left: 0; }
+
+/* remove extra spacing after Home icon */
+.home-btn { padding: 2px; margin-right: 0; }
+.brand .site-logo { margin-right: 0; }
+
+.role-label { margin-left: 0px; margin-right: 8px; color: rgba(255,255,255,0.95); font-size: 0.86rem; opacity: 0.95; }
+
+@media (max-width: 540px) {
+  .brand-label { display: none; }
+}
